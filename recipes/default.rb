@@ -67,6 +67,7 @@ end
 ).each do |key|
   client_attributes[key] = node[key] if node.key?(key)
 end
+client_attributes['chef_environment'] = node.chef_environment
 
 match = node.name.match(/^([a-z\-0-9]+)([0-9]*)\..*$/)
 if match
@@ -92,7 +93,7 @@ sensu_client client_name do
   else
     address node['ipaddress']
   end
-  subscriptions node['roles'] + [node['os'], 'all']
+  subscriptions node['roles'] + node['roles'].map { |r| "#{r}-#{node.chef_environment}" } + [node['os'], 'all']
   additional client_attributes
 end
 

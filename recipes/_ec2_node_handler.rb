@@ -36,3 +36,5 @@ sensu_handler 'ec2_node' do
   severities %w(warning critical)
   timeout node['monitor']['default_handler_timeout']
 end
+
+node.set['monitor']['active_handlers']['ec2_node'] = true

@@ -28,3 +28,13 @@ sensu_filter 'keepalives' do
     }
   )
 end
+
+sensu_filter 'ec2' do
+  attributes(
+    client: {
+      cloud: {
+        provider: 'ec2'
+      }
+    }
+  )
+end
