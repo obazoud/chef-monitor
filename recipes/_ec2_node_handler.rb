@@ -32,7 +32,7 @@ end
 sensu_handler 'ec2_node' do
   type 'pipe'
   command 'handler-ec2_node.rb'
-  filters %w(keepalives ec2)
+  filters %w(keepalives)
   severities %w(warning critical)
   timeout node['monitor']['default_handler_timeout']
 end

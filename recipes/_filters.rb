@@ -24,17 +24,9 @@ end
 sensu_filter 'keepalives' do
   attributes(
     check: {
-      name: 'keepalive'
-    }
-  )
-end
-
-sensu_filter 'ec2' do
-  attributes(
-    client: {
-      cloud: {
-        provider: 'ec2'
-      }
-    }
+      name: 'keepalive',
+      status: 2
+    },
+    occurrences: "eval: value > 3"
   )
 end
