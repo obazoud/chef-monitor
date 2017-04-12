@@ -27,6 +27,6 @@ sensu_filter 'keepalives' do
       name: 'keepalive',
       status: 2
     },
-    occurrences: "eval: value > 3"
+    occurrences: "eval: value > 2"
   )
 end
