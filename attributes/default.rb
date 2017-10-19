@@ -2,7 +2,7 @@ include_attribute 'sensu'
 
 override['sensu']['use_embedded_ruby'] = true
 override['sensu']['version'] = '0.25.1-1'
-override['uchiwa']['version'] = '0.15.0-1'
+override['uchiwa']['version'] = '0.17.1-1'
 
 override['uchiwa']['apt_repo_url'] = 'http://repositories.sensuapp.org/apt'
 override['uchiwa']['yum_repo_url'] = 'http://repositories.sensuapp.org'
