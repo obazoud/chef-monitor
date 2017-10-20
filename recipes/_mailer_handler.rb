@@ -1,7 +1,7 @@
 
 
 sensu_gem 'sensu-plugins-mailer' do
-  version '0.3.1'
+  version '1.2.0'
 end
 
 sensu_snippet 'mailer' do
