@@ -16,8 +16,9 @@ version '0.0.15'
   supports os
 end
 
+depends 'apt', '~> 4.0.1'
 depends 'sudo'
 depends 'yum-epel'
-depends 'build-essential'
-depends 'sensu'
-depends 'uchiwa'
+depends 'build-essential', '~> 6.0.0'
+depends 'sensu', '~> 4.0.6'
+depends 'uchiwa', '~> 1.4.0'
