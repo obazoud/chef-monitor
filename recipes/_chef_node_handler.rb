@@ -20,7 +20,7 @@
 include_recipe 'build-essential::default'
 
 sensu_gem 'sensu-plugins-chef' do
-  version '1.0.0'
+  version '4.0.0'
 end
 
 handler_path = '/opt/sensu/embedded/bin/handler-chef-node.rb'
