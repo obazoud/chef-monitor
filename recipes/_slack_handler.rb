@@ -30,4 +30,5 @@ sensu_handler 'slack' do
   command 'handler-slack.rb'
   severities %w[ok warning critical unknown]
   timeout node['monitor']['default_handler_timeout']
+  filters ['occurrences']
 end

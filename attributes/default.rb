@@ -29,6 +29,7 @@ default['monitor']['default_handler_timeout'] = 300
 default['monitor']['metric_handlers'] = ['debug']
 default['monitor']['metric_interval'] = 60
 default['monitor']['metric_occurrences'] = 2
+default['monitor']['default_refresh'] = 1800
 
 default['monitor']['client_extension_dir'] = '/etc/sensu/extensions/client'
 default['monitor']['server_extension_dir'] = '/etc/sensu/extensions/server'
