@@ -30,3 +30,14 @@ sensu_filter 'keepalives' do
     occurrences: "eval: value > 2"
   )
 end
+
+sensu_filter 'chef_env_filter' do
+  attributes(
+    client: {
+      chef: {
+        chef_environment: 'eval: ((value == "prod") || (value == "staging") || (value == "infra") || (value == "dashboard") || (value == "tools"))'
+      }
+    }
+  )
+  negate true
+end
