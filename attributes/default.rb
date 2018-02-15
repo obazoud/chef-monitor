@@ -2,7 +2,7 @@ include_attribute 'sensu'
 
 override['sensu']['use_embedded_ruby'] = true
 override['sensu']['version'] = '0.28.5-2'
-override['uchiwa']['version'] = '1.1.3-2'
+override['uchiwa']['version'] = '1.1.3-1'
 
 override['uchiwa']['apt_repo_url'] = 'https://sensu.global.ssl.fastly.net/apt'
 override['uchiwa']['yum_repo_url'] = 'https://sensu.global.ssl.fastly.net'
