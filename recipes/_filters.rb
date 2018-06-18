@@ -35,7 +35,7 @@ sensu_filter 'chef_env_filter' do
   attributes(
     client: {
       chef: {
-        chef_environment: 'eval: ((value == "prod") || (value == "staging") || (value == "infra") || (value == "dashboard") || (value == "tools"))'
+        chef_environment: 'eval: ((value == "prod") || (value == "infra") || (value == "dashboard") || (value == "tools"))'
       }
     }
   )
