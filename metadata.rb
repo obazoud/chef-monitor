@@ -4,7 +4,7 @@ maintainer_email 'phil@hellmi.de'
 license 'Apache 2.0'
 description 'A cookbook for monitoring services, using Sensu, a monitoring framework.'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version '0.0.15'
+version '0.0.16'
 
 %w(
   ubuntu
@@ -20,5 +20,5 @@ depends 'apt', '~> 4.0.1'
 depends 'sudo'
 depends 'yum-epel'
 depends 'build-essential', '~> 6.0.0'
-depends 'sensu', '~> 4.0.6'
-depends 'uchiwa', '~> 1.4.0'
+depends 'sensu', '= 5.1.1'
+depends 'uchiwa', '~> 2.1.0'
