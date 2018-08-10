@@ -22,5 +22,5 @@ include_recipe 'monitor::default'
 include_recipe 'build-essential::default'
 
 sensu_gem 'sensu-plugins-rabbitmq' do
-  version '1.3.1'
+  version '5.4.0'
 end
