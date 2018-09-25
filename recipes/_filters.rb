@@ -32,12 +32,10 @@ sensu_filter 'keepalives' do
 end
 
 sensu_filter 'chef_env_filter' do
+  negate false
   attributes(
     client: {
-      chef: {
-        chef_environment: 'eval: ((value == "prod") || (value == "infra") || (value == "dashboard") || (value == "tools"))'
-      }
+      chef_environment: 'eval: ((value == "prod") || (value == "infra") || (value == "dashboard"))'
     }
   )
-  negate true
 end
