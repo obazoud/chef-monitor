@@ -32,7 +32,7 @@ unless node['monitor']['pagerduty_api_key'].nil?
   sensu_handler 'pagerduty' do
     type 'pipe'
     command 'handler-pagerduty.rb'
-    filters ['actions']
+    filters ['occurrences', 'pagerduty_alert_filter']
   end
 
 end

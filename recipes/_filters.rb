@@ -39,3 +39,16 @@ sensu_filter 'chef_env_filter' do
     }
   )
 end
+
+sensu_filter 'pagerduty_alert_filter' do
+  negate false
+  attributes(
+    check: {
+      status: 2
+    },
+    action: 'eval: %w[create].include? value.to_s',
+    client: {
+      chef_environment: 'eval: ((value == "prod") || (value == "infra") || (value == "dashboard"))'
+    }
+  )
+end
