@@ -93,7 +93,7 @@ sensu_client client_name do
   else
     address node['ipaddress']
   end
-  subscriptions node['roles'] + node['roles'].map { |r| "#{r}-#{node.chef_environment}" } + [node['os'], 'all'] + node.default["monitor"]["extra_subscriptions"]
+  subscriptions node['roles'] + node['roles'].map { |r| "#{r}-#{node.chef_environment}" } + [node['os'], 'all'] + node["monitor"]["extra_subscriptions"]
   additional client_attributes
 end
 
