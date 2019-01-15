@@ -57,5 +57,7 @@ default['monitor']['smtp_password'] = nil
 default['monitor']['smtp_authentication'] = nil
 default['monitor']['smtp_enable_starttls_auto'] = true
 
+default["monitor"]["extra_subscriptions"] = []
+
 # build-essential
 normal['build-essential']['compile_time'] = true
